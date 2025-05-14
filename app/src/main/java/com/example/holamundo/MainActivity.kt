@@ -46,7 +46,7 @@ class MainActivity : AppCompatActivity() {
         btnCerrar.setOnClickListener(View.OnClickListener {
             val builder = AlertDialog.Builder(this)
             builder.setTitle("App Hola")
-            builder.setMessage(" ¿Deseas salir de la aplicacion ?")
+            builder.setMessage(" ¿Deseas salir de la aplicacion?")
 
             builder.setPositiveButton("Aceptar"){dialog, which ->
                 finish()
