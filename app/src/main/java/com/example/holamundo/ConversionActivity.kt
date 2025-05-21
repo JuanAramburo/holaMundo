@@ -4,6 +4,7 @@ import android.os.Bundle
 import android.view.View
 import android.widget.Button
 import android.widget.EditText
+import android.widget.RadioButton
 import android.widget.TextView
 import android.widget.Toast
 import androidx.activity.enableEdgeToEdge
@@ -11,41 +12,61 @@ import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
+import org.w3c.dom.Text
 
-class MainActivity : AppCompatActivity() {
+class ConversionActivity : AppCompatActivity() {
 
-    private lateinit var lblSaludo : TextView
-    private lateinit var txtNombre : EditText
-    private lateinit var btnSaludar : Button
+    private lateinit var txtCantidad : EditText
+    private lateinit var txtResultado : TextView
+    private lateinit var rbdCel : RadioButton
+    private lateinit var rbdFar : RadioButton
+
+    private lateinit var btnCalcular : Button
     private lateinit var btnLimpiar : Button
     private lateinit var btnCerrar : Button
 
-    fun IniciarComponentes(){
-        lblSaludo = findViewById(R.id.lblSaludar) as TextView
-        txtNombre = findViewById(R.id.txtNombre) as EditText
-        btnSaludar = findViewById(R.id.btnSaludo)
+    public fun iniciarComponentes(){
+
+        txtCantidad = findViewById(R.id.txtCantidad)
+        txtResultado = findViewById(R.id.txtResultado)
+        rbdCel = findViewById(R.id.rbdCel)
+        rbdFar = findViewById(R.id.rbdFar)
+        btnCalcular = findViewById(R.id.btnCalcular)
         btnLimpiar = findViewById(R.id.btnLimpiar)
         btnCerrar = findViewById(R.id.btnCerrar)
+
     }
 
-    fun eventosBotones(){
-        btnSaludar.setOnClickListener(View.OnClickListener {
-            var strNombre : String = "";
-            if (txtNombre.text.toString().contentEquals(charSequence = "")){
-                Toast.makeText(applicationContext,"Falto capturar el nombre",Toast.LENGTH_SHORT).show()
+    public fun eventosBotones(){
+        btnCalcular.setOnClickListener{
+            val cantidad = txtCantidad.text.toString()
+
+            if (cantidad.isEmpty()){
+                Toast.makeText(this,"Ingresa una cantidad", Toast.LENGTH_SHORT).show()
+                return@setOnClickListener
             }
-            else {
-                strNombre = "Hola " + txtNombre.text.toString() + " como estas?"
-                lblSaludo.text = strNombre
+
+            val grados = cantidad.toDouble()
+
+            if (rbdCel.isChecked){
+                val resCel = (grados * 9/5) + 32
+                txtResultado.text = "$grados °c = %.2f °F".format(resCel)
+            } else if (rbdFar.isChecked){
+                val resFar = (grados - 32) * 5/9
+                txtResultado.text = "$grados °F = %.2f °C".format(resFar)
+            }else{
+                Toast.makeText(this,"Selecciona una conversion", Toast.LENGTH_SHORT).show()
             }
-        })
+        }
         btnLimpiar.setOnClickListener(View.OnClickListener {
-            txtNombre.setText("")
-            lblSaludo.setText("")
+            txtCantidad.setText("")
+            txtResultado.setText("")
+            rbdCel.isChecked = false
+            rbdFar.isChecked = false
         })
         btnCerrar.setOnClickListener(View.OnClickListener {
             val builder = AlertDialog.Builder(this)
-            builder.setTitle("Hola")
+            builder.setTitle("Conversion")
             builder.setMessage(" ¿Deseas regresar al menu?")
 
             builder.setPositiveButton("Aceptar"){dialog, which ->
@@ -63,9 +84,9 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
-        setContentView(R.layout.activity_main)
+        setContentView(R.layout.activity_conversion)
 
-        IniciarComponentes()
+        iniciarComponentes()
         eventosBotones()
 
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->

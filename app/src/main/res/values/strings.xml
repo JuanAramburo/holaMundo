@@ -4,6 +4,9 @@
     <string name="pulsar">Pulsame</string>
     <string name="limpiar">Limpiar</string>
     <string name="cerrar">Cerrar</string>
+    <string name="peso">Peso</string>
+    <string name="altura">Altura (Metros)</string>
+    <string name="calcular">Calcular</string>
 
     <string name="app_name">PrimerAplicacion</string>
     <string name="miempresa">Servicios Informaticos</string>
@@ -11,4 +14,15 @@
     <string name="matricula">2020030187</string>
     <string name="materia">Desarrollo Movil</string>
     <string name="desImaCot">Logo Toyota</string>
+    
+    <!--Convertidor -->
+    
+    <string name="cel">Celcius a Fahrenheit</string>
+    <string name="far">Fahrenheit a Celcius</string>
+    <string name="res">Resultado</string>
+    <string name="lblGrados">Grados</string>
+    <string name="lblCantidad">Cantidad</string>
+    <string name="btnLimpiar">Limpiar</string>
+    <string name="btnCalcular">Calcular</string>
+    <string name="btnCerrar">Cerrar</string>
 </resources>

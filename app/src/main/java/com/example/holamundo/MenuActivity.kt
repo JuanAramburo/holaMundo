@@ -36,9 +36,16 @@ class MenuActivity : AppCompatActivity() {
             val intent = Intent(this,MainActivity::class.java)
             startActivity(intent)
         })
+        crvImc.setOnClickListener(View.OnClickListener {
+            val intent = Intent(this,IMCActivity::class.java)
+            startActivity(intent)
+        })
+        crvGrados.setOnClickListener(View.OnClickListener {
+            val intent = Intent(this,ConversionActivity::class.java)
+            startActivity(intent)
+        })
         crvSalir.setOnClickListener(View.OnClickListener {
             val builder = AlertDialog.Builder(this)
-            builder.setTitle("App Hola")
             builder.setMessage(" ¿Deseas salir de la aplicacion ?")
 
             builder.setPositiveButton("Aceptar"){dialog, which ->

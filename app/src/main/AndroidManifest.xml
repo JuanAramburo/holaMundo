@@ -13,6 +13,12 @@
         android:theme="@style/Theme.HolaMundo"
         tools:targetApi="31">
         <activity
+            android:name=".ConversionActivity"
+            android:exported="false" />
+        <activity
+            android:name=".IMCActivity"
+            android:exported="false" />
+        <activity
             android:name=".MainActivity"
             android:exported="true" />
         <activity
