@@ -37,7 +37,52 @@ class ConversionActivity : AppCompatActivity() {
 
     }
 
-    public fun eventosBotones(){
+    public fun eventosClic(){
+        btnCalcular.setOnClickListener(View.OnClickListener {
+            //Validacion
+            if(txtCantidad.text.toString().isEmpty()){
+                Toast.makeText(this,"Falto capturar cantidad",Toast.LENGTH_SHORT).show()
+            } else{
+                var cantidad:Float = txtCantidad.text.toString().toFloat()
+                if (rbdCel.isChecked){
+                    var celcius :Float = 0.0f
+                    celcius = (cantidad * 9/5) + 32
+                    txtResultado.text = celcius.toString()
+                }
+                if (rbdFar.isChecked){
+                    var fahrenheit :Float = 0.0f
+                    fahrenheit = (cantidad - 32) * 5/9
+                    txtResultado.text = fahrenheit.toString()
+                }
+            }
+            btnLimpiar.setOnClickListener(View.OnClickListener {
+                txtCantidad.setText("")
+                txtResultado.setText("")
+                rbdCel.isChecked = false
+                rbdFar.isChecked = false
+            })
+            btnCerrar.setOnClickListener(View.OnClickListener {
+                val builder = AlertDialog.Builder(this)
+                builder.setTitle("Conversion")
+                builder.setMessage(" ¿Deseas regresar al menu?")
+
+                builder.setPositiveButton("Aceptar"){dialog, which ->
+                    finish()
+                }
+                builder.setNegativeButton("Cancelar") { dialog, which ->
+                    Toast.makeText(
+                        applicationContext,
+                        "Quiza", Toast.LENGTH_SHORT).show()
+                }
+                builder.show()
+            })
+
+        })
+    }
+
+
+
+    /* public fun eventosBotones(){
         btnCalcular.setOnClickListener{
             val cantidad = txtCantidad.text.toString()
 
@@ -79,7 +124,7 @@ class ConversionActivity : AppCompatActivity() {
             }
             builder.show()
         })
-    }
+    } */
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -87,7 +132,7 @@ class ConversionActivity : AppCompatActivity() {
         setContentView(R.layout.activity_conversion)
 
         iniciarComponentes()
-        eventosBotones()
+        eventosClic()
 
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->
             val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())

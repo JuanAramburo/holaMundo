@@ -44,6 +44,10 @@ class MenuActivity : AppCompatActivity() {
             val intent = Intent(this,ConversionActivity::class.java)
             startActivity(intent)
         })
+        crvMoneda.setOnClickListener(View.OnClickListener {
+            val intent = Intent(this,MonedaActivity::class.java)
+            startActivity(intent)
+        })
         crvSalir.setOnClickListener(View.OnClickListener {
             val builder = AlertDialog.Builder(this)
             builder.setMessage(" ¿Deseas salir de la aplicacion ?")

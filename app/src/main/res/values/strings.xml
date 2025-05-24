@@ -10,13 +10,13 @@
 
     <string name="app_name">PrimerAplicacion</string>
     <string name="miempresa">Servicios Informaticos</string>
-    <string name="alumno">Juan Aramburo</string>
+    <string  name="alumno">Juan Aramburo</string>
     <string name="matricula">2020030187</string>
     <string name="materia">Desarrollo Movil</string>
     <string name="desImaCot">Logo Toyota</string>
-    
+
     <!--Convertidor -->
-    
+
     <string name="cel">Celcius a Fahrenheit</string>
     <string name="far">Fahrenheit a Celcius</string>
     <string name="res">Resultado</string>
@@ -25,4 +25,17 @@
     <string name="btnLimpiar">Limpiar</string>
     <string name="btnCalcular">Calcular</string>
     <string name="btnCerrar">Cerrar</string>
+
+    <!--- Arreglos -->
+    <string-array name="monedas">
+        <item>Dolares Americanos</item>
+        <item>Dolares Canadienses</item>
+        <item>Euros</item>
+        <item>Libras Esterlinas</item>
+    </string-array>
+    <string name="dolarA">19.37</string>
+    <string name="dolarC">13.97</string>
+    <string name="euro">21.95</string>
+    <string name="libra">26.00</string>
+
 </resources>
