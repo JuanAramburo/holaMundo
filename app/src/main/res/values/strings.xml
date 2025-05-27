@@ -10,7 +10,7 @@
 
     <string name="app_name">PrimerAplicacion</string>
     <string name="miempresa">Servicios Informaticos</string>
-    <string  name="alumno">Juan Aramburo</string>
+    <string name="alumno">Juan Aramburo</string>
     <string name="matricula">2020030187</string>
     <string name="materia">Desarrollo Movil</string>
     <string name="desImaCot">Logo Toyota</string>
@@ -37,5 +37,20 @@
     <string name="dolarC">13.97</string>
     <string name="euro">21.95</string>
     <string name="libra">26.00</string>
+
+    <!-- Cotizacion -->
+    <string name="domicilio">Av del Mar 1200</string>
+    <string name="ciudad">Mazatlan, Sinaloa</string>
+    <string name="marca">Toyota</string>
+    <string name="cliente">Nombre del cliente</string>
+    <string name="folio">Num. Folio</string>
+    <string name="des">Descripcion del Automovil</string>
+    <string name="precio">Valor del Automovil</string>
+    <string name="po">Porcentaje de pago Inicial</string>
+    <string name="plazos">Plazos</string>
+    <string name="mensual">Pago Mensual</string>
+    <string name="inicial">Pago Inicial</string>
+    <string name="finan">Total a Financiar</string>
+
 
 </resources>
