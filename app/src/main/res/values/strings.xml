@@ -52,5 +52,20 @@
     <string name="inicial">Pago Inicial</string>
     <string name="finan">Total a Financiar</string>
 
+    <!--- Spinner -->
+    <string name="spinner_name">Spinner personalizado</string>
+    <string name="itemFrases">Categorias de Frases</string>
+    <string name="itemAgradecimiento">Agradecimiento</string>
+    <string name="itemAmor">Amor</string>
+    <string name="itemNewYear">Año Nuevo</string>
+    <string name="itemCanciones">Canciones</string>
+    <string name="msgFrase">Desplegar</string>
+    <string name="msgAgradecimiento">Prueba dar las gracias</string>
+    <string name="msgAmor">Enamora con estas frases</string>
+    <string name="msgNewYear">Feliz Año Nuevo</string>
+    <string name="msgCanciones">Escucha solo lo mejor</string>
+    <string name="msgSeleccion">Se ha seleccionado</string>
+    <string name="msgDescripcion">Selecciona una categoria</string>
+
 
 </resources>
