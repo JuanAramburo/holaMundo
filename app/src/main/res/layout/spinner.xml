@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto">
@@ -13,19 +14,20 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        android:padding="14dp">
+        android:padding="20dp">
 
         <ImageView
             android:layout_width="100dp"
             android:layout_height="50dp"
             android:id="@+id/imgCategoria"
-            android:layout_weight="1">
+            android:layout_weight="1"
+            android:layout_gravity="center">
 
         </ImageView>
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_height="wrap_content"
             android:orientation="vertical"
             android:layout_weight="1"
             android:paddingLeft="10dp">
@@ -33,8 +35,8 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:id="@+id/lblCategorias"
-                android:text="Categorias"
+                android:id="@+id/lblCarrera"
+                android:text="Carrera"
                 android:textSize="20dp"
                 android:textStyle="bold"
                 android:textColor="@color/colorTitulo">
@@ -44,12 +46,23 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:id="@+id/lblDescripcion"
-                android:text="Mensaje"
+                android:id="@+id/lblAlumno"
+                android:text="Alumno"
                 android:textSize="16dp"
                 android:textColor="@color/colorSubTitulo">
 
             </TextView>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/lblMatricula"
+                android:text="Matricula"
+                android:textSize="16dp"
+                android:textColor="@color/colorSubTitulo"
+                android:gravity="end" />
+
+
 
         </LinearLayout>
 

@@ -66,6 +66,18 @@
     <string name="msgCanciones">Escucha solo lo mejor</string>
     <string name="msgSeleccion">Se ha seleccionado</string>
     <string name="msgDescripcion">Selecciona una categoria</string>
+    <string name="itemAlumnos">Lista de Alumnos</string>
+    <string name="itemAlumnos1">Selecciona un alumno</string>
+    <string name="itemPersona1">Javier Lopez Gonzalez</string>
+    <string name="itemPersona2">Rosa Isela Lopez</string>
+    <string name="itemPersona3">Brenda Hernandez Camarena</string>
+    <string name="itemPersona4">Jose Tavares Torres</string>
+    <string name="carrera1">Ing. Tecnologias de la informacion</string>
+    <string name="mat0">-</string>
+    <string name="matPersona1">2022030100</string>
+    <string name="matPersona2">2022030101</string>
+    <string name="matPersona3">2022030102</string>
+    <string name="matPersona4">2022030103</string>
 
 
 </resources>

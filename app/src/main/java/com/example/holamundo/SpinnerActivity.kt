@@ -29,14 +29,14 @@ class SpinnerActivity : AppCompatActivity() {
         // agregar elementos
         val list = ArrayList<itemData>()
 
-        list.add(itemData(getString(R.string.itemFrases),getString(R.string.msgFrase),R.drawable.categorias))
-        list.add(itemData(getString(R.string.itemAgradecimiento),getString(R.string.msgAgradecimiento),R.drawable.agradecimiento))
-        list.add(itemData(getString(R.string.itemAmor),getString(R.string.msgAmor),R.drawable.corazon))
-        list.add(itemData(getString(R.string.itemNewYear),getString(R.string.msgNewYear),R.drawable.nuevo))
-        list.add(itemData(getString(R.string.itemCanciones),getString(R.string.msgCanciones),R.drawable.canciones))
+        list.add(itemData(getString(R.string.itemAlumnos),getString(R.string.itemAlumnos1),getString(R.string.mat0),R.drawable.alumnologo))
+        list.add(itemData(getString(R.string.itemPersona1),getString(R.string.carrera1),getString(R.string.matPersona1),R.drawable.persona1))
+        list.add(itemData(getString(R.string.itemPersona2),getString(R.string.carrera1),getString(R.string.matPersona2),R.drawable.persona2))
+        list.add(itemData(getString(R.string.itemPersona3),getString(R.string.carrera1),getString(R.string.matPersona3),R.drawable.persona3))
+        list.add(itemData(getString(R.string.itemPersona4),getString(R.string.carrera1),getString(R.string.matPersona4),R.drawable.persona4))
 
         //generar el adaptador
-        val adapter = SpinnerAdapter(this,R.layout.spinner, R.id.lblCategorias,list)
+        val adapter = SpinnerAdapter(this,R.layout.spinner, R.id.lblCarrera,list)
         spn = findViewById(R.id.spnItems)
         spn.adapter = adapter
 
@@ -49,7 +49,7 @@ class SpinnerActivity : AppCompatActivity() {
                 id: Long
             ) {
                 val item = parent?.getItemAtPosition(position) as itemData
-                txtSel.text = item.txtDescripcion
+                txtSel.text = item.txtCarrera
             }
 
             override fun onNothingSelected(parent: AdapterView<*>?) {

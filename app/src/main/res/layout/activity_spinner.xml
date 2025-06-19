@@ -35,7 +35,8 @@
             android:id="@+id/spnItems"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:paddingBottom="10sp" />
+            android:paddingBottom="10sp"
+            />
 
         <Space
             android:layout_width="0dp"

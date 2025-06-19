@@ -24,11 +24,14 @@ class SpinnerAdapter (
         val imagen = itemView.findViewById<ImageView>(R.id.imgCategoria)
         imagen.setImageResource(list[position].imageId)
 
-        val textCategoria = itemView.findViewById<TextView>(R.id.lblCategorias)
-        textCategoria.text = list[position].txtCategoria
+        val textCarrera = itemView.findViewById<TextView>(R.id.lblCarrera)
+        textCarrera.text = list[position].txtCarrera
 
-        val textDescripcion = itemView.findViewById<TextView>(R.id.lblDescripcion)
-        textDescripcion.text = list[position].txtDescripcion
+        val textAlumno = itemView.findViewById<TextView>(R.id.lblAlumno)
+        textAlumno.text = list[position].txtAlumno
+
+        val textMatricula = itemView.findViewById<TextView>(R.id.lblMatricula)
+        textMatricula.text = list[position].txtMatricula
         return itemView
     }
 
@@ -38,11 +41,14 @@ class SpinnerAdapter (
         val imagen = itemView.findViewById<ImageView>(R.id.imgCategoria)
         imagen.setImageResource(list[position].imageId)
 
-        val textCategoria = itemView.findViewById<TextView>(R.id.lblCategorias)
-        textCategoria.text = list[position].txtCategoria
+        val textCarrera = itemView.findViewById<TextView>(R.id.lblCarrera)
+        textCarrera.text = list[position].txtCarrera
 
-        val textDescripcion = itemView.findViewById<TextView>(R.id.lblDescripcion)
-        textDescripcion.text = list[position].txtDescripcion
+        val textAlumno = itemView.findViewById<TextView>(R.id.lblAlumno)
+        textAlumno.text = list[position].txtAlumno
+
+        val textMatricula = itemView.findViewById<TextView>(R.id.lblMatricula)
+        textMatricula.text = list[position].txtMatricula
 
         return itemView
     }
