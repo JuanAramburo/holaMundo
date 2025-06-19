@@ -4,6 +4,7 @@ import android.os.Bundle
 import android.view.View
 import android.widget.AdapterView
 import android.widget.Button
+import android.widget.ListView
 import android.widget.Spinner
 import android.widget.TextView
 import android.widget.Toast
@@ -15,13 +16,13 @@ import androidx.core.view.WindowInsetsCompat
 
 class SpinnerActivity : AppCompatActivity() {
 
-    private lateinit var spn: Spinner
+    private lateinit var spn: ListView
     private lateinit var btnCerrar: Button
     private lateinit var btnLimpiar : Button
     private lateinit var txtSel : TextView
 
     fun iniciarComponentes(){
-        spn = findViewById(R.id.spnItems)
+        spn = findViewById(R.id.lstItems)
         btnCerrar = findViewById(R.id.btnCerrar)
         btnLimpiar = findViewById(R.id.btnLimpiar)
         txtSel = findViewById(R.id.txtSel)
@@ -29,7 +30,6 @@ class SpinnerActivity : AppCompatActivity() {
         // agregar elementos
         val list = ArrayList<itemData>()
 
-        list.add(itemData(getString(R.string.itemAlumnos),getString(R.string.itemAlumnos1),getString(R.string.mat0),R.drawable.alumnologo))
         list.add(itemData(getString(R.string.itemPersona1),getString(R.string.carrera1),getString(R.string.matPersona1),R.drawable.persona1))
         list.add(itemData(getString(R.string.itemPersona2),getString(R.string.carrera1),getString(R.string.matPersona2),R.drawable.persona2))
         list.add(itemData(getString(R.string.itemPersona3),getString(R.string.carrera1),getString(R.string.matPersona3),R.drawable.persona3))
@@ -37,31 +37,22 @@ class SpinnerActivity : AppCompatActivity() {
 
         //generar el adaptador
         val adapter = SpinnerAdapter(this,R.layout.spinner, R.id.lblCarrera,list)
-        spn = findViewById(R.id.spnItems)
+        spn = findViewById(R.id.lstItems)
         spn.adapter = adapter
 
-        spn.onItemSelectedListener = object
-            : AdapterView.OnItemSelectedListener{
-            override fun onItemSelected(
-                parent: AdapterView<*>?,
-                view: View?,
-                position: Int,
-                id: Long
-            ) {
-                val item = parent?.getItemAtPosition(position) as itemData
-                txtSel.text = item.txtCarrera
-            }
+        spn.setOnItemClickListener { parent, view, position, id ->
+            val item = parent.getItemAtPosition(position) as itemData
+            txtSel.text = item.txtCarrera
+        }
 
-            override fun onNothingSelected(parent: AdapterView<*>?) {
-                txtSel.text = ""
-            }
-            }
         btnLimpiar.setOnClickListener(View.OnClickListener{
-            spn.setSelection(0)
+            spn.clearChoices()
+            txtSel.text = "Se ha seleccionado"
+            (spn.adapter as SpinnerAdapter).notifyDataSetChanged()
         })
         btnCerrar.setOnClickListener(View.OnClickListener {
             val builder = AlertDialog.Builder(this)
-            builder.setTitle("Spinner")
+            builder.setTitle("Lista")
             builder.setMessage(" ¿Deseas regresar al menu?")
 
             builder.setPositiveButton("Aceptar"){dialog, which ->
