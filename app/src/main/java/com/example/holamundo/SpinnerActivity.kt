@@ -34,6 +34,14 @@ class SpinnerActivity : AppCompatActivity() {
         list.add(itemData(getString(R.string.itemPersona2),getString(R.string.carrera1),getString(R.string.matPersona2),R.drawable.persona2))
         list.add(itemData(getString(R.string.itemPersona3),getString(R.string.carrera1),getString(R.string.matPersona3),R.drawable.persona3))
         list.add(itemData(getString(R.string.itemPersona4),getString(R.string.carrera1),getString(R.string.matPersona4),R.drawable.persona4))
+        list.add(itemData(getString(R.string.itemPersona5),getString(R.string.carrera1),getString(R.string.matPersona5),R.drawable.persona5))
+        list.add(itemData(getString(R.string.itemPersona6),getString(R.string.carrera1),getString(R.string.matPersona6),R.drawable.persona6))
+        list.add(itemData(getString(R.string.itemPersona7),getString(R.string.carrera1),getString(R.string.matPersona7),R.drawable.persona7))
+        list.add(itemData(getString(R.string.itemPersona8),getString(R.string.carrera1),getString(R.string.matPersona8),R.drawable.persona8))
+        list.add(itemData(getString(R.string.itemPersona4),getString(R.string.carrera1),getString(R.string.matPersona4),R.drawable.persona4))
+        list.add(itemData(getString(R.string.itemPersona4),getString(R.string.carrera1),getString(R.string.matPersona4),R.drawable.persona4))
+
+
 
         //generar el adaptador
         val adapter = SpinnerAdapter(this,R.layout.spinner, R.id.lblCarrera,list)

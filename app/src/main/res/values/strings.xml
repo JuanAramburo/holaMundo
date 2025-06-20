@@ -72,12 +72,20 @@
     <string name="itemPersona2">Rosa Isela Lopez</string>
     <string name="itemPersona3">Brenda Hernandez Camarena</string>
     <string name="itemPersona4">Jose Tavares Torres</string>
+    <string name="itemPersona5">Jorge Aramburo Perez</string>
+    <string name="itemPersona6">Alex Abrahantes</string>
+    <string name="itemPersona7">Kevin Fuentes Talamantes</string>
+    <string name="itemPersona8">Jesus Maria y Jose</string>
     <string name="carrera1">Ing. Tecnologias de la informacion</string>
     <string name="mat0">-</string>
     <string name="matPersona1">2022030100</string>
     <string name="matPersona2">2022030101</string>
     <string name="matPersona3">2022030102</string>
     <string name="matPersona4">2022030103</string>
+    <string name="matPersona5">2022030104</string>
+    <string name="matPersona6">2022030105</string>
+    <string name="matPersona7">2022030106</string>
+    <string name="matPersona8">2022030107</string>
 
 
 </resources>
